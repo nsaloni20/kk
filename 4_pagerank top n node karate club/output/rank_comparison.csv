@@ -1,0 +1,6 @@
+Rank #,Top_PageRank,Top_Degree,Top_Betweenness,Top_Closeness
+1,33,33,0,0
+2,0,0,33,2
+3,32,32,32,33
+4,2,2,2,31
+5,1,1,31,8

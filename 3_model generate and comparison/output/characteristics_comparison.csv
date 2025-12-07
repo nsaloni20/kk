@@ -1,0 +1,8 @@
+Characteristic,Erdos_Renyi,Watts_Strogatz,Barabasi_Albert
+Nodes,1000,1000,1000
+Edges,4985,3000,2991
+Density,0.01,0.006,0.006
+Average Degree,9.97,6.0,5.98
+Clustering Coefficient,0.0111,0.5439,0.0333
+Is Connected,True,True,True
+Average Path Length,3.26,8.852,3.4665

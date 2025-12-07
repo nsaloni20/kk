@@ -1,0 +1,5 @@
+Network,Nodes,Edges,Density,Avg Clustering Coeff,Avg Degree Centrality,Avg Closeness Centrality,Avg Betweenness Centrality,ASPL (Exact),Diameter (Exact)
+PoliticalBooks (~100),107,442,0.07794,0.4784,0.07794,0.31751,0.01906,3.0788,7
+EuroRoad (~1k),1174,1417,0.00206,0.0167,0.00206,0.04567,0.01163,18.3951,62
+Hamsterster (~2.4k → ~10k proxy),2426,16630,0.00565,0.5375,0.00565,0.19453,0.00073,3.589,10
+Amazon (~335k),334868,925876,2.00E-05,0.3967,2.00E-05,0.0855,SKIPPED (too large),SKIPPED (too large),SKIPPED (too large)
