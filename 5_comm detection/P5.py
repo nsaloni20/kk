@@ -1,12 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-"""
-Converted from Jupyter Notebook: notebook.ipynb
-Conversion Date: 2025-12-07T12:19:09.707Z
-"""
-
 !pip install python-louvain
-
 
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -16,12 +8,10 @@ from itertools import combinations
 from collections import Counter
 import numpy as np
 
-
 G = nx.karate_club_graph()
 
 print("Nodes:", G.number_of_nodes())
 print("Edges:", G.number_of_edges())
-
 
 ground_truth = {}
 
@@ -31,9 +21,7 @@ for node, data in G.nodes(data=True):
 # Convert to numeric labels
 gt_labels = {n: (0 if club == "Mr. Hi" else 1) for n, club in ground_truth.items()}
 
-
 louvain_labels = community_louvain.best_partition(G)
-
 
 fg_comms = list(greedy_modularity_communities(G))
 
@@ -42,7 +30,6 @@ fg_labels = {}
 for i, comm in enumerate(fg_comms):
     for node in comm:
         fg_labels[node] = i
-
 
 def plot_communities(G, labels, title):
     communities = set(labels.values())
@@ -62,10 +49,8 @@ def plot_communities(G, labels, title):
     plt.title(title)
     plt.show()
 
-
 plot_communities(G, louvain_labels, "Louvain Community Detection")
 plot_communities(G, fg_labels, "Fast-Greedy Community Detection")
-
 
 def purity_score(true_labels, predicted_labels):
     N = len(true_labels)
@@ -91,7 +76,6 @@ def purity_score(true_labels, predicted_labels):
 
     return purity / N
 
-
 def rand_index(true_labels, pred_labels):
     TP = TN = FP = FN = 0
     nodes = list(true_labels.keys())
@@ -110,7 +94,6 @@ def rand_index(true_labels, pred_labels):
             FN += 1
 
     return (TP + TN) / (TP + TN + FP + FN)
-
 
 l_purity = purity_score(gt_labels, louvain_labels)
 fg_purity = purity_score(gt_labels, fg_labels)
