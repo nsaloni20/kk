@@ -1,10 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-"""
-Converted from Jupyter Notebook: P5.ipynb
-Conversion Date: 2025-12-07T12:19:36.927Z
-"""
-
 import networkx as nx
 import matplotlib
 import matplotlib.pyplot as plt
